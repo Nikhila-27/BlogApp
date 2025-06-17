@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="card mb-4">
+    <a href="#!"><img class="card-img-top" src="{{blogdetail.image.url}}" alt="..." /></a>
+    <div class="card-body">
+        <div class="small text-muted">{{blogdetail.date}}</div>
+        <h2 class="card-title">{{blogdetail.title}}</h2>
+        <p class="card-text">{{blogdetail.description}}</p>
+        <a class="btn btn-primary" href="{% url 'reader_add_comment' blogdetail.id %}">Add Comment</a><br><br>
+        <a class="btn btn-primary" href="">List Comment</a><br><br>
+        
+
+
+        <!-- <div class="dropdown " >
+            <button class="btn btn-primary dropdown-toggle d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              List Comment
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> -->
+    </div>
+</div>
+
+{% endblock%}
